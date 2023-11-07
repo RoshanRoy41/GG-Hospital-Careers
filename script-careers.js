@@ -8,6 +8,7 @@ request
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
+    i =0;
     for (i = 0; i < 10; i++) {
       const CareerCard = document.createElement("div");
       CareerCard.classList.add("CareerCard");
@@ -27,6 +28,7 @@ request
       Gender.classList.add("Gender");
       const EditNow = document.createElement("button");
       EditNow.classList.add("Edit");
+      EditNow.innerHTML="Edit";
       const CardDescription = document.createElement("p1");
       CardDescription.classList.add("CardDescription");
       CardDescription.textContent =
@@ -36,10 +38,10 @@ request
       FirstName.textContent =
         data.users[i].firstName + " " + data.users[i].lastName;
       //   LastName.textContent = data.users[i].lastName;
-      Age.textContent = data.users[i].age;
-      DOB.textContent = data.users[i].birthDate;
-      PHno.textContent = data.users[i].phone;
-      Gender.textContent = data.users[i].gender;
+      Age.textContent = "Age: " +data.users[i].age +"  |";
+      DOB.textContent = "DOB: "+data.users[i].birthDate+"  |";
+      PHno.textContent = "Phone: "+data.users[i].phone+"  |";
+      Gender.textContent ="Sex: "+ data.users[i].gender;
       // FirstName.textContent = data.users[i].firstName;
 
       console.log(data.users[i].firstName);
