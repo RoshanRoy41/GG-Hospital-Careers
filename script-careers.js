@@ -12,9 +12,11 @@ request
       const CareerCard = document.createElement("div");
       CareerCard.classList.add("CareerCard");
       const FirstName = document.createElement("h2");
-      FirstName.classList.add("FirstName");
-      const LastName = document.createElement("h2");
-      LastName.classList.add("LastName");
+      FirstName.classList.add("Name");
+      //   const LastName = document.createElement("h2");
+      //   LastName.classList.add("LastName");
+      const Details = document.createElement("div");
+      Details.classList.add("details");
       const Age = document.createElement("h3");
       Age.classList.add("Age");
       const DOB = document.createElement("h3");
@@ -31,8 +33,9 @@ request
         "Send your CV to: gghospitalhrd@gmail.com | Contact Number:0471-2779100";
 
       //giving values
-      FirstName.textContent = data.users[i].firstName;
-      LastName.textContent = data.users[i].lastName;
+      FirstName.textContent =
+        data.users[i].firstName + " " + data.users[i].lastName;
+      //   LastName.textContent = data.users[i].lastName;
       Age.textContent = data.users[i].age;
       DOB.textContent = data.users[i].birthDate;
       PHno.textContent = data.users[i].phone;
@@ -41,13 +44,14 @@ request
 
       console.log(data.users[i].firstName);
       CareerCard.appendChild(FirstName);
-      CareerCard.appendChild(LastName);
-      CareerCard.appendChild(Age);
-      CareerCard.appendChild(DOB);
-      CareerCard.appendChild(PHno);
-      CareerCard.appendChild(Gender);
-      CareerCard.appendChild(EditNow);
+      //   CareerCard.appendChild(LastName);
+      Details.appendChild(Age);
+      Details.appendChild(DOB);
+      Details.appendChild(PHno);
+      Details.appendChild(Gender);
+      CareerCard.appendChild(Details);
       CareerCard.appendChild(CardDescription);
+      CareerCard.appendChild(EditNow);
       cardContainer.appendChild(CareerCard);
     }
   })
