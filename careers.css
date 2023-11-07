@@ -1,0 +1,94 @@
+*{
+    font-family: Inter,sans-serif!important;
+}
+
+.career-container{
+    display: flex;
+    padding-top: 30px;
+}
+
+.career-container h1{
+    flex: 1;
+    margin: 0px;
+    line-height: 1.5;
+    color: var(--dark, #211E1E);
+    font-family: Inter;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+}
+
+.career-container p{
+    margin: 0px;
+    padding-left: 90px;
+    line-height: 1.5;
+    color: var(--dark, #211E1E);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+}
+
+.container{
+    padding-top: 100px;
+}
+
+.CareerCard{
+    width: 90%;
+    height: 30%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 14px 23px 0px;
+    border-radius: 10px;
+    /* position: absolute; */
+    padding-right: 50px;
+    border: #17C1A3 2px solid;
+    padding-bottom: 20px;
+}
+
+.CareerCard h2{
+    margin: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    color: var(--dark, #211E1E);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    padding-left: 5px;
+    padding-top: 20px;
+    
+}
+
+.CareerCard h3{
+    font-weight: 200;
+    padding-left: 5px;
+}
+
+.CareerCard .CardDescription{
+    padding-left: 5px;
+    margin-left: 20px;
+}
+
+.CareerCard .Edit{
+    background-color: #17C1A3;
+    color: white;
+    height: 59px;
+    width:150px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    float: right;
+    position: relative;
+    bottom: 80px;
+}
+
+.CareerCard .details{
+    display: flex;
+    margin-left: 20px;
+}
+
