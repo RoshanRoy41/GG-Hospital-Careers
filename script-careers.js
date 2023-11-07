@@ -1,60 +1,127 @@
-const url = "https://dummyjson.com/users";
+import { getData } from "./getData.js";
+import { postData } from "./postData.js";
 
-const request = fetch(url);
+const usersURL = "https://dummyjson.com/users";
+const usersAddURL = "https://dummyjson.com/products/add";
 
-let cardContainer = document.querySelector(".container");
+const changePage = (user_id) => {
+  console.log(user_id);
+  const newPageURL = `forms.html?user_id=${user_id}`;
+  window.location.href = newPageURL;
+};
 
-request
-  .then((response) => response.json())
-  .then((data) => {
+const updateUser = () => {
+  const form = document.getElementById("career-form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    data.modified_on = new Date().toISOString();
     console.log(data);
-    i =0;
-    for (i = 0; i < 10; i++) {
-      const CareerCard = document.createElement("div");
-      CareerCard.classList.add("CareerCard");
-      const FirstName = document.createElement("h2");
-      FirstName.classList.add("Name");
-      //   const LastName = document.createElement("h2");
-      //   LastName.classList.add("LastName");
-      const Details = document.createElement("div");
-      Details.classList.add("details");
-      const Age = document.createElement("h3");
-      Age.classList.add("Age");
-      const DOB = document.createElement("h3");
-      DOB.classList.add("DOB");
-      const PHno = document.createElement("h3");
-      PHno.classList.add("Phno");
-      const Gender = document.createElement("h3");
-      Gender.classList.add("Gender");
-      const EditNow = document.createElement("button");
-      EditNow.classList.add("Edit");
-      EditNow.innerHTML="Edit";
-      const CardDescription = document.createElement("p1");
-      CardDescription.classList.add("CardDescription");
-      CardDescription.textContent =
-        "Send your CV to: gghospitalhrd@gmail.com | Contact Number:0471-2779100";
 
-      //giving values
-      FirstName.textContent =
-        data.users[i].firstName + " " + data.users[i].lastName;
-      //   LastName.textContent = data.users[i].lastName;
-      Age.textContent = "Age: " +data.users[i].age +"  |";
-      DOB.textContent = "DOB: "+data.users[i].birthDate+"  |";
-      PHno.textContent = "Phone: "+data.users[i].phone+"  |";
-      Gender.textContent ="Sex: "+ data.users[i].gender;
-      // FirstName.textContent = data.users[i].firstName;
+    const response = await postData(usersAddURL, data);
+    console.log(response);
+    // window.location.href = "career.html";
+  });
+};
 
-      console.log(data.users[i].firstName);
-      CareerCard.appendChild(FirstName);
-      //   CareerCard.appendChild(LastName);
-      Details.appendChild(Age);
-      Details.appendChild(DOB);
-      Details.appendChild(PHno);
-      Details.appendChild(Gender);
-      CareerCard.appendChild(Details);
-      CareerCard.appendChild(CardDescription);
-      CareerCard.appendChild(EditNow);
-      cardContainer.appendChild(CareerCard);
-    }
-  })
-  .catch((error) => console.log(error));
+const loadCareerPage = async () => {
+  const data = await getData(usersURL);
+  const usersArray = data.users;
+  usersArray.forEach((user, index) => {
+    const user_id = user.id;
+    const firstName = user.firstName;
+    const lastName = user.lastName;
+    const age = user.age;
+    const birthDate = user.birthDate;
+    const gender = user.gender;
+    const phone = user.phone;
+
+    const cardItemDiv = document.createElement("div");
+    cardItemDiv.className = "card-item";
+
+    const firstDiv = document.createElement("div");
+    const firstParagraph = document.createElement("h2");
+    firstParagraph.textContent = `${firstName} ${lastName}`;
+    firstDiv.appendChild(firstParagraph);
+
+    const secondParagraph = document.createElement("h3");
+    secondParagraph.textContent = `Department: ${age} | Gender: ${gender} | Phone: ${phone}`;
+
+    const thirdParagraph = document.createElement("h3");
+    thirdParagraph.textContent = `DOB: ${birthDate}`;
+
+    const editButton = document.createElement("button");
+    editButton.className = "Edit";
+    editButton.textContent = "Edit Now";
+    editButton.setAttribute("user_id", user_id);
+    editButton.onclick = () => changePage(user_id);
+
+    cardItemDiv.appendChild(firstDiv);
+    cardItemDiv.appendChild(secondParagraph);
+    cardItemDiv.appendChild(thirdParagraph);
+    cardItemDiv.appendChild(editButton);
+
+    const cardContainer = document.getElementById("career-cards");
+    cardContainer.appendChild(cardItemDiv);
+  });
+};
+
+const loadUserCareerPage = async () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const user_id = urlParams.get("user_id");
+  const user_url = `${usersURL}/${user_id}`;
+  const user = await getData(user_url);
+
+  const firstName = user.firstName;
+  const lastName = user.lastName;
+  const age = user.age;
+  const birthDate = user.birthDate;
+  const gender = user.gender;
+  const phone = user.phone;
+
+  const userItemDiv = document.createElement("div");
+  userItemDiv.className = "user-item";
+
+  const firstParagraph = document.createElement("h1");
+  firstParagraph.textContent = `${firstName} ${lastName}`;
+
+  const breakElement = document.createElement("br");
+
+  const secondParagraph = document.createElement("h2");
+  secondParagraph.textContent = `Age: ${age} | Gender: ${gender} | Phone: ${phone}`;
+
+  userItemDiv.appendChild(firstParagraph);
+  userItemDiv.appendChild(breakElement);
+  userItemDiv.appendChild(secondParagraph);
+
+  const cardContainer = document.getElementById("career-cards");
+  cardContainer.appendChild(userItemDiv);
+
+  const firstname_input = document.getElementById("firstname");
+  firstname_input.value = firstName;
+
+  const lastname_input = document.getElementById("lastname");
+  lastname_input.value = lastName;
+
+  const phone_input = document.getElementById("phone");
+  phone_input.value = phone;
+
+  const birth_input = document.getElementById("birthDate");
+  birth_input.value = birthDate;
+
+  const age_input = document.getElementById("age");
+  age_input.value = age;
+
+  const gender_input = document.getElementById("gender");
+  gender_input.value = gender;
+};
+
+if (window.location.href.split("/").pop() === "careers.html") {
+  loadCareerPage();
+} else {
+  updateUser();
+  loadUserCareerPage();
+}
