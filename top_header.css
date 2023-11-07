@@ -1,0 +1,621 @@
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    overflow-x:visible;
+}
+.container{
+    margin-left:100px;
+    margin-right:100px;
+    margin-top: 20px;
+    
+}
+
+
+.image-container img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-caption1 {
+   
+    
+    font-weight: bold;
+    margin: 0px;
+    font-size: 3.75rem;
+    line-height: 1.2;
+    letter-spacing: -0.00833em;
+    
+}
+.image-caption2 {
+    font-size: 17px;
+    margin-bottom: 25px;
+    line-height: 2;
+    letter-spacing: 1.5px;
+    word-spacing: 1px;
+}
+
+
+.image-text {
+   position: absolute;
+   
+   left: 12%;
+   bottom:20%;
+   
+    
+}
+.button{
+    background-color: #17C1A3;
+    color: white;
+    height: 59px;
+    width:238px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.button:hover{
+  
+    cursor: pointer;
+    border: solid #e9f7f481 2px;
+    transition:0.2rgb(123, 141, 138)
+}
+
+.book-appointment-section{
+    position: relative;
+    background-color: white;
+    left: 40px;
+    bottom: 70px;
+    margin-left:12px;
+    padding: 20px ;
+    width: 1000px ;
+    border-radius: 20px;
+    box-shadow:0px 4px 15px 2px rgba(0, 0, 0, 0.07);
+}
+
+.book-appointment 
+{
+    padding: 10px ;
+    margin: 0px;
+    margin-left: 5px;
+}
+
+.book-appointment input{
+    width: 32%;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 5px;
+}
+
+.book-appointment select{
+    width: 32%;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 5px;
+}
+
+.book-button{
+    
+    background-color: #17C1A3;
+    color: white;
+    height: 50px;
+    width:32%;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin: 5px;
+}
+
+.appointment-title{
+    font-size:20px;
+    font-weight: bold;
+    word-spacing: 2px;
+    margin: 3px 15px 0px;
+    
+    
+}
+
+
+.departments-title-section{
+    display: flex;
+}
+
+.departments-title{
+    flex:1;
+}
+
+.departments-title p{
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.;
+}
+.departments-arrow{
+    flex: flex-end ;
+    padding-top: 70px;
+    
+}
+
+.departments-card-container{
+    display: flex;
+    overflow: hidden;
+   justify-content: space-between;
+   gap: 20px;
+}
+
+.departments-card{
+    flex:1;
+    
+}
+
+
+.departments-card img{
+   width: 100%;
+}
+
+.departments_card_title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.departments_card_title p{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.departments-card a{
+    color: #17C1A3 ;
+}
+
+.why-gg{
+    display:flex;
+    background-color: #E8F9F6;
+    margin-top: 150px;
+    height: 450px;
+}
+
+.why-gg-image_container{
+    flex:2;
+    position:relative;
+    display:inline;
+    overflow:hidden;
+
+}
+
+
+.image2{
+    position:absolute;
+    bottom:5;
+    left:0;
+    width: 100%;
+}
+
+.why-gg-image_container img{
+   
+    width: 100%;
+    margin: 0;
+    
+}
+
+.design-image{
+    opacity:50%;
+}
+
+.why-gg-content{
+    flex:1;
+    padding:55px 50px 0px 0px;
+}
+
+.why-gg-title{
+    font-size:27px;
+    font-weight: bold;
+}
+
+.why-gg-content li{
+    list-style-image: url("list.png") ;
+    padding: 4px;
+}
+
+.doctors-card-container{
+    display: flex;
+}
+
+.doctors-card{
+    flex:1;
+}
+
+.doctors{
+    margin-top: 150px;
+}
+
+.doctors-title-container{
+    justify-content: center;
+}
+
+.doctors-title{
+    font-size: 27px;
+    font-weight: bolder;
+    letter-spacing: 1;
+}
+
+.doctors-title-container p{
+    text-align: center;
+    line-height: 0.5;
+    line-height: 0.2;
+}
+
+
+
+
+.doctors-card img{
+    width: 260px;
+    
+}
+
+.doctors-speciality{
+    font-size: 15px;
+    
+}
+
+.doctors-card{
+    margin-top: 35px;
+    text-align: center;
+    line-height: 0.5;
+}
+.doctors-name{
+    font-size: 23px;
+    font-weight: bolder;
+    margin-top: 40px;
+}
+
+.doctors-button-container{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.doctors-button-container button{
+    color:white;
+    background-color: #17C1A3;
+    border: 0;
+    width:155px;
+    height: 45px;
+    border-radius:5px;
+}
+
+.doctors-button-container button:hover{
+    box-shadow:0px 4px 15px 2px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+}
+
+
+.facilities{
+    margin-top: 150px;
+    width:100%;
+    
+}
+
+.facilities-title-container{
+    display: flex;
+}
+
+.facilities-title{
+    flex: 2;
+}
+.facilities-title p{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-right: 7%;
+    text-align:end;
+}
+
+.facilities-arrow{
+    flex:1;
+}
+
+.facilities-arrow img{
+    float: right;
+    margin-top:38px;
+}
+
+
+.facilities-image-container{
+    display: flex;
+    overflow: hidden;
+   justify-content: space-between;
+   gap: 20px;
+}
+
+.facilities-image{
+    flex:1;
+}
+
+.facilities-image img{
+    width: 100%;
+}
+
+
+
+
+
+.interested{
+    margin-top: 150px;
+    width:100%;
+    
+}
+
+.interested-title-container{
+    display: flex;
+}
+
+.interested-title{
+    flex: 2;
+}
+.interested-title p{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-right: 7%;
+    text-align:end;
+}
+
+.interested-arrow{
+    flex:1;
+    
+}
+
+.interested-arrow img{
+    float: right;
+    margin-top:38px;
+}
+
+
+.interested-image-container{
+    display: flex;
+    overflow: hidden;
+   justify-content: space-between;
+   gap: 20px;
+    
+    
+}
+
+.interested-image-card{
+    flex:1;
+       
+}
+
+.interested-image-card img{
+    width: 100%;  
+
+}
+
+
+
+
+.interested-image-title {
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+.interested-image-title p{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+
+
+.interested-image-card a{
+    color: #17C1A3 ;
+
+}
+
+.subscriber{
+    display:flex;
+   
+    margin-top: 150px;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    border: solid black 1px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.subscriber-title-container{
+    flex:1;
+    margin-left:100px;
+    margin-top: 40px;
+    position: relative;
+    
+   
+}
+.subscriber-buttons{
+    flex:1;
+    display: flex;
+    position: flex-end;
+    margin-right: 70px;
+    align-items: center;
+    margin-top:30px;
+    height: 48px;
+    border-bottom: solid 1px;
+}
+.subscriber-buttons input{
+    width: 300px;
+    height: 34px;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    word-spacing: 0.75px;
+
+}
+
+.subscriber-buttons button{
+    width: 200px;
+    height: 35px;
+    background-color: #17C1A3;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    
+}
+    
+
+.subscriber-title-container p{
+    font-size:25px;
+    font-weight: bolder;
+    line-height: 1.5;
+}
+
+.subscriber-title-container img{
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    
+}
+
+
+
+.container-2{
+    margin-left:100px;
+    margin-right:100px;
+    margin-top: 20px;
+    
+}
+
+.main-container{
+    overflow-x: visible;
+   
+}
+
+footer{
+    background: #F9FAFA;
+    margin-top: 150px;
+    border-top: solid black 0.5px;
+    
+}
+
+#up-foot{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+   
+  #up-1{
+    
+    font-size: smaller;
+  }
+   
+  #up-img{
+    margin-top: 20px;
+    width: 200px;
+  }
+   
+  #up2-grid{
+   
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+   
+  .up2-class{
+    text-align: center;
+    padding: 15px;
+    padding-top: 0px;
+    font-size: smaller;
+  }
+   
+  #up2-h{
+    margin-top: 40px ;
+    margin-left: 16px;
+  }
+   
+  #up3-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+   
+  .up3-class{
+    
+    padding: 15px;
+    padding-top: 0px;
+    font-size: smaller;
+  }
+   
+  #up3-h{
+    margin-top: 40px ;
+    margin-left: 18px;
+  }
+   
+  #up-p{
+    line-height: 1.5;
+    font-size: small;
+    letter-spacing: 1px;
+  }
+  #foot-line{
+    position: relative;
+    z-index: 30;
+    margin-bottom: -60px;
+    margin-top: 30px;
+  }
+   
+  #foot-hr{
+    width: 85%;
+  }
+   
+  #down-foot
+  {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 3%;
+    margin-right: 40px;
+    margin-top: 30px;
+    font-size: small;
+    margin-top: 80px;
+    
+   
+  }
+  #df-1
+  {
+    padding-right: 5px;
+    display: flex;
+  }
+  #df1-p
+  {
+    margin-top: -4px;
+    padding-left: 20px;
+  }
+  #df-2
+  {
+    display: flex;
+    padding-left: 100px;
+  }
+  #df2-p
+  {
+    margin-top: -4px;
+    padding-left: 20px;
+  }
+  #df-3
+  {
+    display: flex;
+    padding-left: 100px;
+    
+  }
+  #df3-p
+  {
+    margin-top: -4px;
+    padding-left: 20px;
+  }
+  #df-4
+  {
+    margin-left: 70px;
+    margin-top: -4px;
+    
+  }
+  #df4-h
+  {
+    margin-top: 3px;
+  }
+  #df4-icon
+  {
+    font-size: 20px;
+    word-spacing: 5px;
+    margin-top: 10px;
+    padding-left: 9PX;
+  }
