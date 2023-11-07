@@ -45,83 +45,63 @@
         </div>
       </div>
     </body>
-    <div class="container">     <!--start here for dynamic adding of elements-->
-      <div class="main">
-        <h1>Apply Now</h1>
-        <p>Please complete the form below to apply for the position with us</p>
-        <form>
-          <div class="row">
-            <div class="column">
-              <input
-                id="one"
-                type="text"
-                id="first_name"
-                name="first_name"
-                required
-                placeholder="First Name"
-              />
-            </div>
-            <div class="column">
-              <input
-                id="two"
-                type="text"
-                id="last_name"
-                name="last_name"
-                required
-                placeholder="Last Name"
-              />
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="column">
-              <input
-                id="three"
-                type="number"
-                id="number"
-                name="number"
-                required
-                placeholder="Phone Number"
-              />
-            </div>
-            <div class="column">
-              <input
-                id="four"
-                type="date"
-                id="date"
-                name="date"
-                required
-                placeholder="DOB"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="column">
-              <input
-                id="five"
-                type="text"
-                id="gender"
-                name="gender"
-                required
-                placeholder="Gender"
-              />
-            </div>
-            <div class="column">
-              <input
-                id="six"
-                type="text"
-                id="age"
-                name="age"
-                required
-                placeholder="Age"
-              />
-            </div>
-          </div>
-
-          <button>Apply Now</button>
-        </form>
+    <div class="section">
+      <div class="sectionMain">
+        <h1 id="career-header">Careers</h1>
+        <div id="career-cards">
+        </div>
       </div>
     </div>
+      <form id="career-form">
+        <div class="row">
+          <div class="column">
+            <div class="user-field">
+              <!-- <label for="firstname">Firstname: </label> -->
+              <input type="text" id="firstname" name="firstname" placeholder="Enter firstname" />
+            </div>
+            
+          </div>
+          <div class="column">
+            <div class="user-field">
+              <!-- <label for="num2">Lastname: </label> -->
+              <input type="text" id="lastname" name="lastname" placeholder="Enter lastname" />
+            </div>
+          </div>
+        </div>
+         <div class="row">
+          <div class="colum">
+            <div class="user-field">
+              <!-- <label for="phone">Phone: </label> -->
+              <input type="text" id="phone" name="phone" placeholder="Enter phonenumber" />
+            </div>
+             
+          </div>
+          <div class="colum">
+            <div class="user-field">
+              <!-- <label for="birthDate">DoB: </label> -->
+              <input type="date" id="birthDate"name="birthDate" placeholder="Enter DOB" />
+            </div>
+          </div>
+         </div>
+         <div class="row">
+          <div class="column">
+            <div class="user-field">
+              <!-- <label for="age">Age: </label> -->
+              <input type="text" id="age" name="uni" placeholder="Enter Age" />
+            </div>
+            
+          </div>
+          <div class="column">
+            <div class="user-field">
+              <!-- <label for="gender"></label> -->
+              <input type="text" id="gender" name="uni" placeholder="Enter Gender" />
+            </div>
+          </div>
+         </div>
+        <div>
+          <button id="submit-button" class="button" type="submit">Submit</button>
+        </div>
+      </form>
     <footer id="foot">
         <div id="up-foot">
           <div id="up-1">
@@ -180,5 +160,7 @@
             </div>
           </div>
       </footer>
+<script type="module" src="script-careers.js"></script>
+
   </body>
 </html>
